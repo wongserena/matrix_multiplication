@@ -1,0 +1,14 @@
+import numpy as np
+m = int(input('1st matrix row: '))
+n = int(input('1st matrix column: '))
+h = int(input('2nd matrix column: '))
+p = np.arange(n * m)
+p += 1
+p = p.reshape(m,n)
+q = np.arange(n * h)
+q += n * m + 1
+q = q.reshape(n,h)
+print(p)
+print(q)
+res = np.dot(p,q)
+print(res)
