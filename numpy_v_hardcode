@@ -1,0 +1,20 @@
+import numpy as np
+import timeit
+
+def func1():
+	arr = ([1.,2.,3.],[4.,5.,6.])
+	res = [[0.,0.,0.],[0.,0.,0.]]
+	for idx1, row in enumerate(arr):
+		for idx2, val2 in enumerate(row):
+			res[idx1][idx2]=val2*val2
+	print(res)
+
+def func2():
+	arr = np.array([[1.,2.,3.], [4.,5.,6.]])
+	res = arr * arr 
+	print(res)
+
+func1()
+print(timeit.timeit())
+func2()
+print(timeit.timeit())
