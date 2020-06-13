@@ -1,0 +1,12 @@
+import numpy as np
+n = int(input('dimensions: '))
+p = np.arange(n * n)
+p += 1
+p = p.reshape(n,n)
+q = np.arange(n * n)
+q += 5
+q = q.reshape(n,n)
+print(p)
+print(q)
+res = np.dot(p,q)
+print(res)
